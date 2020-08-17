@@ -2,15 +2,14 @@ import _ from 'lodash'
 const parse5 = require('parse5')
 console.log('____',_)
 const _DEFAUL_TOPTION = {
+
     template: "",
     data : () => {
     },
     methods:{},
     watch:{},
 }
-
-function SueComponent(wueComponentProps = {}) {  
-    
+function SueComponent(wueComponentProps = {}) {      
     const {
         template = "",
         data = () => {
@@ -44,7 +43,6 @@ function SueComponent(wueComponentProps = {}) {
         this.$mount(this.$options.el,this)
     }
 }
-
 SueComponent.prototype.observe = function (data, path = "") {
     const self = this;
     if (!data || Object.prototype.toString.call(data) !== "[object Object]") {
